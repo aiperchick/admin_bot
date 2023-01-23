@@ -36,9 +36,3 @@ async def ban_user(message: types.Message):
                 chat_id=message.chat.id,
                 user_id=message.reply_to_message.from_user.id
             )
-
-
-def register_admin_handlers(dp: Dispatcher):
-    dp.register_message_handler(ban_user, commands=['да'], commands_prefix='!')
-    dp.register_message_handler(check_words)
-
